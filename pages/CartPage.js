@@ -8,6 +8,10 @@ class CartPage extends Base {
         this.cartRows = page.locator('table.cart tr.cart-item-row');
         this.productNames = page.locator('table.cart td.product a.product-name');
         this.quantityInputs = page.locator('table.cart input.qty-input');
+
+        // Q3 e lagbe
+        this.termsCheckbox = page.locator('#termsofservice');
+        this.checkoutButton = page.locator('#checkout');
     }
 
     async getProductNames() {
@@ -19,6 +23,14 @@ class CartPage extends Base {
     async getFirstQuantity() {
         const q = await this.quantityInputs.first().inputValue();
         return Number(q);
+    }
+
+    async agreeTerms() {
+        await this.termsCheckbox.check();
+    }
+
+    async clickCheckout() {
+        await this.clickElement(this.checkoutButton);
     }
 }
 
