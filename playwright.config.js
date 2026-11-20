@@ -10,15 +10,22 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: 1,
+  timeout: 90000,
+  expect: { timeout: 15000 },
 
-  // HTML report
-  reporter: 'html',
+  // HTML + Allure dutoi report hobe
+  reporter: [
+    ['list'],
+    ['html', { outputFolder: 'playwright-report', open: 'never' }],
+    ['allure-playwright', { resultsDir: 'allure-results' }],
+  ],
 
   // Shared browser settings
   use: {
     trace: 'on-first-retry',
-    screenshot: 'only-on-failure',
+    screenshot: 'on',   // report e screenshot attach howar jonno
     video: 'retain-on-failure',
+    actionTimeout: 20000,
   },
 
   // Browser configuration
