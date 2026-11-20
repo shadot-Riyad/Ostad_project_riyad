@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:q1": "node scripts/run.js q1",
+    "test:q2": "node scripts/run.js q2",
+    "test:ui": "node scripts/run.js ui",
+    "report:open": "allure open allure-report",
+    "report:html": "playwright show-report playwright-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
