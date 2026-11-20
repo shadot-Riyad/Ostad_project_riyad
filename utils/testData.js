@@ -19,3 +19,13 @@ export const products = {
     name: 'Computing and Internet',
     searchTerm: 'Computing'
 };
+
+// checkout er billing address
+export const billingAddress = {
+    country: 'United States',
+    state: 'Alabama',
+    city: 'Birmingham',
+    address: '123 Test Street',
+    zip: '35203',
+    phone: '2055550123'
+};
