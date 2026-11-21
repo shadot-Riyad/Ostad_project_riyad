@@ -72,10 +72,11 @@ Every command first deletes the old results, then runs the tests, then generates
 Q2 and Q3 both register a fresh user, so they don't depend on each other and can be run alone in any order.
 
 ## Reports
-
 ```bash
 npm run report:open    # opens the Allure report in the browser
 npm run report:html    # opens the Playwright HTML report
+npx allure generate allure-results --clean -o allure-report
+npx allure open allure-report
 ```
 
 The API HTML report is saved at `reports/api/api-report.html` after `npm run test:api` or `npm run test:all`.
