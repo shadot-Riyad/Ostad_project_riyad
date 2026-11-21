@@ -8,6 +8,8 @@
     "test:q2": "node scripts/run.js q2",
     "test:q3": "node scripts/run.js q3",
     "test:ui": "node scripts/run.js ui",
+    "test:api": "node scripts/run.js api",
+    "test:all": "node scripts/run.js all",
     "report:open": "allure open allure-report",
     "report:html": "playwright show-report playwright-report"
   },
@@ -21,6 +23,7 @@
     "allure-commandline": "^2.46.1",
     "allure-playwright": "^3.14.0",
     "newman": "^6.2.3",
+    "newman-reporter-allure": "^3.0.0",
     "newman-reporter-htmlextra": "^1.23.1"
   }
 }
